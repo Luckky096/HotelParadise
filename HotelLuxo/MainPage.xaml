@@ -1,0 +1,88 @@
+﻿<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="HotelLuxo.Views.MainPage"
+    Title="Hotel Paradise">
+
+    <ScrollView>
+
+        <VerticalStackLayout
+            Padding="20"
+            Spacing="15">
+
+            <Image
+                Source="hotel.jpeg"
+                HeightRequest="220"
+                Aspect="AspectFill"/>
+
+            <Label
+                Text="Hotel Paradise Resort"
+                FontSize="30"
+                FontAttributes="Bold"
+                TextColor="#0F4C81"
+                HorizontalOptions="Center"/>
+
+            <Frame
+                CornerRadius="15"
+                Padding="15"
+                BackgroundColor="White">
+
+                <VerticalStackLayout Spacing="10">
+
+                    <Label
+                        Text="Quantidade de Adultos"
+                        FontAttributes="Bold"/>
+
+                    <Stepper
+                        x:Name="stpAdultos"
+                        Minimum="1"
+                        Maximum="10"
+                        Increment="1"/>
+
+                    <Label
+                        Text="Data Check-in"
+                        FontAttributes="Bold"/>
+
+                    <DatePicker
+                        x:Name="dtCheckin"
+                        Format="dd/MM/yyyy"/>
+
+                    <Label
+                        Text="Data Check-out"
+                        FontAttributes="Bold"/>
+
+                    <DatePicker
+                        x:Name="dtCheckout"
+                        Format="dd/MM/yyyy"/>
+
+                    <Label
+                        Text="Tipo de Quarto"
+                        FontAttributes="Bold"/>
+
+                    <Picker
+                        x:Name="pkQuarto"
+                        Title="Selecione">
+
+                        <Picker.Items>
+                            <x:String>Standard</x:String>
+                            <x:String>Luxo</x:String>
+                            <x:String>Premium</x:String>
+                        </Picker.Items>
+
+                    </Picker>
+
+                    <Button
+                        Text="Reservar"
+                        BackgroundColor="#0F4C81"
+                        TextColor="White"
+                        CornerRadius="15"/>
+
+                </VerticalStackLayout>
+
+            </Frame>
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+</ContentPage>
